@@ -1,10 +1,27 @@
 .header {
-    text-align: center;
     background: #33B5E5;
     color: #fff;
-    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 70px;
+}
+
+.nav-area {
+    list-style: none;
+}
+
+.nav-area li {
+    display: inline-block;
+    padding: 0 15px;
+    text-transform: uppercase;
 }
 
 a {
     color: #ffffff;
+}
+
+a:hover {
+    color: purple;
+    cursor: pointer;
 }
