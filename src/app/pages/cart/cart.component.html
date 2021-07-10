@@ -20,7 +20,7 @@
             </div>
         </ng-template>
     </div>
-    <div div class="cart-item-details">
+    <div class="cart-item-details">
         <form [formGroup]="form">
             <div class="form-group">
                 <span>Full name</span>
@@ -33,7 +33,7 @@
             </div>
         </form>
         <div class="button-container">
-            <button (click)="submitOrder()" [disabled]="form?.invalid">Submit</button>
+            <button (click)="submitOrder()" [disabled]="form?.invalid || !cart.length">Submit</button>
         </div>
     </div>
 </div>
