@@ -39,6 +39,11 @@ export class CartComponent implements OnInit {
         this.totalPrice = this.cartService.getTotalPrice();
     }
 
+    removeProduct(product: Product) {
+        this.cart = this.cartService.removeProduct(product);
+        this.totalPrice = this.cartService.getTotalPrice();
+    }
+
     submitOrder() {
         this.cartService.shopperName = this.form.get('fullname')?.value;
         this.router.navigate([`/confirmation`]);

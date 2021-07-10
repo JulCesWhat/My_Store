@@ -19,7 +19,13 @@ export class CartService {
             product.quantity = quantity;
             this.cart.push(product);
         }
-        // window.alert(`${quantity} ${product.name}(s) have been added to the cart!`)
+        window.alert(`${quantity} ${product.name}(s) have been added to the cart!`)
+    }
+
+    removeProduct(product: Product): Product[] {
+        window.alert(`${product.quantity} ${product.name}(s) have been removed from the cart!`)
+        this.cart = this.cart.filter((p) => (p.id != product.id));
+        return this.cart;
     }
 
     getCart(): Product[] {

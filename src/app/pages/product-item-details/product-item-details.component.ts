@@ -34,7 +34,8 @@ export class ProductItemDetailsComponent implements OnInit {
             .subscribe((product: Product) => {
                 this.product = product;
             }, (error) => {
-
+                // Logging error for right now
+                console.log(error);
             });
     }
 

@@ -21,7 +21,7 @@ export class ProductService {
             } else {
                 this.httpClient.get("assets/data.json")
                     .subscribe((data) => {
-                        this.products = (data as any[]).map((p) => {
+                        this.products = (data as Product[]).map((p) => {
                             return new Product(p);
                         });
                         observer.next(this.products);

@@ -20,7 +20,8 @@ export class ProductListComponent implements OnInit {
             .subscribe((data: Product[]) => {
                 this.products = data;
             }, (error) => {
-
+                // Logging error for right now
+                console.log(error);
             });
     }
 
