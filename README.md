@@ -1,6 +1,6 @@
 # MyStore
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.1.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.1. The application is a simple shopping cart. The user can add products to the cart. The user can then enter his details to complete the cart.
 
 ## Development server
 
