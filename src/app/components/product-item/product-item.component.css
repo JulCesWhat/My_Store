@@ -20,3 +20,9 @@
     width: 108px;
     margin-bottom: 8px;
 }
+
+button {
+    width: 100%;
+    height: 30px;
+    margin-top: 5px;
+}

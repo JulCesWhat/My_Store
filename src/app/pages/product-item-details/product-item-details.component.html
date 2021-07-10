@@ -1,3 +1,15 @@
 <div class="detail-container ">
     <img [src]="product?.url" />
+    <div class="detail-item">
+        <h2>{{product?.name}}</h2>
+        <p>{{product?.price | currency}}</p>
+        <p>{{product?.description}}</p>
+        <div class="select-input">
+            <app-dropdown
+                [form]="form">
+            </app-dropdown>
+            <button (click)="addToCart()">Add to cart</button>
+        </div>
+        <a class="back-link" routerLink="/product-list">Back to product list</a>
+    </div>
 </div>

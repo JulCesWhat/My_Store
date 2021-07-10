@@ -1,0 +1,7 @@
+<form [formGroup]="form">
+    <div class="form-group">
+        <select formControlName="quantity" class="form-control">
+            <option *ngFor="let option of options">{{option}}</option>
+        </select>
+    </div>
+</form>

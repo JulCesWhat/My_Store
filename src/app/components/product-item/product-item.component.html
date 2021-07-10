@@ -2,4 +2,10 @@
     <img class="product-image" [src]="product?.url" (click)="handleImgClickEvent()" />
     <p>{{product?.name}}</p>
     <p>{{product?.price | currency}}</p>
+    <div class="select-input">
+        <app-dropdown
+            [form]="form">
+        </app-dropdown>
+        <button (click)="addToCart()">Add to cart</button>
+    </div>
 </div>
