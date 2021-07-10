@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { ProductItemComponent } from './product-item/product-item.component';
 import { RouterModule } from '@angular/router';
+import { DropdownComponent } from './dropdown/dropdown.component';
 
 @NgModule({
     declarations: [
         HeaderComponent,
-        ProductItemComponent
+        ProductItemComponent,
+        DropdownComponent
     ],
     imports: [
         CommonModule,
@@ -15,7 +17,8 @@ import { RouterModule } from '@angular/router';
     ],
     exports: [
         HeaderComponent,
-        ProductItemComponent
+        ProductItemComponent,
+        DropdownComponent
     ]
 })
 export class ComponentsModule { }
