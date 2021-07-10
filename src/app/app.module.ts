@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { ComponentsModule } from './components/components.module';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { CartComponent } from './pages/cart/cart.component';
@@ -21,7 +22,8 @@ import { ProductListComponent } from './pages/product-list/product-list.componen
     imports: [
         BrowserModule,
         AppRoutingModule,
-        ComponentsModule
+        ComponentsModule,
+        HttpClientModule
     ],
     providers: [],
     bootstrap: [AppComponent]
