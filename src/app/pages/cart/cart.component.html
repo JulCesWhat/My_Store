@@ -1,19 +1,23 @@
 <div class="cart-container">
     <div class="cart-item-details">
-        <div class="cart-item" *ngFor="let product of cart">
-            <img [src]="product.url" />
-            <div class="cart-item-details">
-                <h4>{{product.name}}</h4>
-                <p>{{product.price | currency}}</p>
-                <p>Amount: {{product.quantity}}</p>
+        <ng-container *ngIf="cart.length; else empty_cart">
+            <div class="cart-item" *ngFor="let product of cart">
+                <img [src]="product.url" />
+                <div class="cart-item-details">
+                    <h4>{{product.name}}</h4>
+                    <p>{{product.price | currency}}</p>
+                    <p>Amount: {{product.quantity}}</p>
+                </div>
             </div>
-        </div>
-        <!-- <div class="cart-item-details">
-            <div>{{product.description}}</div>
-        </div> -->
-        <h3>
-            Total {{totalPrice | currency}}
-        </h3>
+            <h3>
+                Total {{totalPrice | currency}}
+            </h3>
+        </ng-container>
+        <ng-template #empty_cart>
+            <div class="empty-cart-message">
+                <p>The cart is empty. Please add items to cart.</p>
+            </div>
+        </ng-template>
     </div>
     <div div class="cart-item-details">
         <form [formGroup]="form">
@@ -24,6 +28,7 @@
                 <input formControlName="address" class="form-control" placeholder="(minimun 6 characters)" />
                 <span>Credit card number</span>
                 <input formControlName="creditcard" class="form-control" placeholder="(16-digit number)" />
+                <span class="card-message">We will never share your payment details with anyone else.</span>
             </div>
         </form>
         <div class="button-container">
