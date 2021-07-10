@@ -7,6 +7,7 @@ import { Product } from '../modals/product';
 export class CartService {
 
     cart: Product[] = [];
+    shopperName: string = '';
 
     constructor() { }
 
@@ -24,5 +25,16 @@ export class CartService {
     getCart(): Product[] {
         return this.cart;
     }
+
+    getTotalPrice(): number {
+        return this.cart.map((p) => (p.quantity * p.price))
+            .reduce((sum, current) => sum + current, 0);
+    }
+
+    resetCartDetails() {
+        this.cart = [];
+        this.shopperName = '';
+    }
+
 
 }

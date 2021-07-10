@@ -1,1 +1,33 @@
-<p>cart works!</p>
+<div class="cart-container">
+    <div class="cart-item-details">
+        <div class="cart-item" *ngFor="let product of cart">
+            <img [src]="product.url" />
+            <div class="cart-item-details">
+                <h4>{{product.name}}</h4>
+                <p>{{product.price | currency}}</p>
+                <p>Amount: {{product.quantity}}</p>
+            </div>
+        </div>
+        <!-- <div class="cart-item-details">
+            <div>{{product.description}}</div>
+        </div> -->
+        <h3>
+            Total {{totalPrice | currency}}
+        </h3>
+    </div>
+    <div div class="cart-item-details">
+        <form [formGroup]="form">
+            <div class="form-group">
+                <span>Full name</span>
+                <input formControlName="fullname" class="form-control" placeholder="(minimun 3 characters)" />
+                <span>Address</span>
+                <input formControlName="address" class="form-control" placeholder="(minimun 6 characters)" />
+                <span>Credit card number</span>
+                <input formControlName="creditcard" class="form-control" placeholder="(16-digit number)" />
+            </div>
+        </form>
+        <div class="button-container">
+            <button (click)="submitOrder()" [disabled]="form?.invalid">Submit</button>
+        </div>
+    </div>
+</div>
